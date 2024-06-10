@@ -14,14 +14,15 @@
             background-color: black;
         }
         video {
-            width: 80%;
-            max-width: 1000px; /* Max width for larger screens */
+            width: 100%;
             height: auto;
+            max-width: 1000px;
+            max-height: 1778px; /* Adjust to maintain aspect ratio 9:16 */
         }
     </style>
 </head>
 <body>
-    <video controls>
+    <video autoplay muted playsinline>
         <source src="SKYT Blockchain.mov" type="video/mp4">
         Your browser does not support the video tag.
     </video>
