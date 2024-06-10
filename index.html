@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -24,14 +25,68 @@
             width: 100%;
             height: 100%;
         }
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .links a:hover {
+            background-color: #0056b3;
+        }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-158WJXNDFQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-158WJXNDFQ');
+    </script>
 </head>
 <body>
     <div class="video-container">
-        <video controls autoplay>
+        <video id="video" controls autoplay>
             <source src="SKYT Blockchain.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+    <div class="links">
+        <a href="https://www.skyocean.io" target="_blank">Visit Us</a>
+        <a href="https://us18.list-manage.com/contact-form?u=07b0fea6a57d892592969e323&form_id=baae198ffd49bd083cc872ef1128cd3f" target="_blank">Sign Up</a>
+        <a href="mailto:skyt@skyocean.io">Contact Us</a>
+    </div>
+
+    <script>
+      document.getElementById('video').addEventListener('play', function() {
+        gtag('event', 'play', {
+          'event_category': 'Videos',
+          'event_label': 'SKYT Blockchain Video'
+        });
+      });
+
+      document.getElementById('video').addEventListener('pause', function() {
+        gtag('event', 'pause', {
+          'event_category': 'Videos',
+          'event_label': 'SKYT Blockchain Video'
+        });
+      });
+
+      document.getElementById('video').addEventListener('ended', function() {
+        gtag('event', 'ended', {
+          'event_category': 'Videos',
+          'event_label': 'SKYT Blockchain Video'
+        });
+      });
+    </script>
 </body>
 </html>
