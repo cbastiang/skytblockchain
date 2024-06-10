@@ -13,19 +13,28 @@
             margin: 0;
             background-color: black;
         }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            padding-top: 177.78%; /* 9:16 aspect ratio */
+        }
         video {
-            width: 90%;
-            height: auto;
-            max-width: 600px; /* Adjust as needed for larger screens */
-            max-height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <video controls autoplay>
-        <source src="SKYT Blockchain.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="video-container">
+        <video controls autoplay>
+            <source src="SKYT Blockchain.mov" type="video/quicktime">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </body>
 </html>
 
