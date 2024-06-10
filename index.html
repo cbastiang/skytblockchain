@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +15,13 @@
             background-color: black;
         }
         .video-container {
-            position: relative;
             width: 100%;
-            max-width: 600px;
-            padding-top: 177.78%; /* 9:16 aspect ratio */
+            max-width: 560px; /* Adjust as needed for larger screens */
+            height: auto;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
-        video {
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -31,10 +33,9 @@
 <body>
     <div class="video-container">
         <video controls autoplay>
-             <source src="SKYT Blockchain.mp4" type="video/mp4">
+            <source src="SKYT Blockchain.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 </body>
 </html>
-
